@@ -12,7 +12,7 @@ First, please shoot us (info@scontain.com) an email providing your Docker ID to 
 Try it out by executing:
 
 ```bash
-git clone https://github.com/doflink/sgx-pyspark-demo && cd sgx-pyspark-demo 
+git clone https://github.com/scontain/sgx-pyspark-demo && cd sgx-pyspark-demo 
 ```
 
 ```bash
