@@ -9,7 +9,6 @@ def print_memory_of_pid(pid, only_writable=True):
     memory_permissions = 'rw' if only_writable else 'r-'
     sys.stderr.write("PID = %d" % pid)
     with open("/proc/%d/maps" % pid, 'r') as maps_file:
-        print "Do"
         with open("/proc/%d/mem" % pid, 'r', 0) as mem_file:
             for line in maps_file.readlines():  # for each mapped region
                 m = re.match(r'([0-9A-Fa-f]+)-([0-9A-Fa-f]+) ([-r][-w])', line)

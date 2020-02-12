@@ -19,6 +19,12 @@ git clone https://github.com/scontain/sgx-pyspark-demo && cd sgx-pyspark-demo
 docker run -it --rm -v `pwd`:/fspf  --privileged -p 8080:8080 -p 6868:6868 -p 28778:28778 sconecuratedimages/www2019:sgx-pyspark sh
 ```
 
+Start Apache Spark and test it with *pi* application:
+
+```bash
+/test.sh
+```
+
 Go to the demo directory:
 
 ```bash
@@ -37,6 +43,7 @@ Export environment variables
 ```bash
 export SCONE_FSPF_KEY=$(cat input/keytag | awk '{print $11}')
 export SCONE_FSPF_TAG=$(cat input/keytag | awk '{print $9}')
+export SCONE_FSPF=/fspf/encrypted-files/volume.fspf
 ```
 
 Now, run the wordcount application with SGX-PySpark.
